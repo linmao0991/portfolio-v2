@@ -1,9 +1,9 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "profiledb",
-    "host": "127.0.0.1",
+    "password": "root",
+    "database": "template",
+    "host": "localhost",
     "dialect": "mysql",
     "operatorsAliases": false
   },
