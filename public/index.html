@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon:" href="assets/img/icons/m-icon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/cedf338da3.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
+    <title>Mao Lin</title>
+</head>
+<body>
+    <!-- Jumbotron -->
+    <div id="myJumboTron" class="jumbotron text-white">
+        <h1> Mao Lin</h1>
+        <div class="dropdown">
+            <button class="btn bg-secondary" data-toggle="dropdown"><i class="fas fa-lg fa-bars bg"></i></button>
+            <div class="dropdown-menu dropDownstyle">
+                <a class="dropdown-item" href="https://www.linkedin.com/in/mao-l-37254518b/" target="_blank"><i class="fab fa-linkedin">Linken</i></a>
+                <a class="dropdown-item" href="https://github.com/linmao0991" target="_blank"><i class="fab fa-github-square">GitHub</i></a>
+                <a class="dropdown-item" href="mailto:lin.maoxian0991@gmail.com"><i class="fas fa-envelope">Email</i></a>
+                <button type="button" class="btn dropdown-item dropDownstyle" data-toggle="modal" data-target="#mesModal"><i class="fas fa-comment-dots">Messege</i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Messege Modal -->
+    <div class="modal fade" id="mesModal">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-tile">Messege Me</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <!-- Messege me Form -->
+                    <form>
+                        <!-- First and Last Name Input -->
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="First Name">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Last Name">
+                            </div>
+                        </div><br>
+                        <!-- Company Information -->
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Company Name">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Your Position">
+                            </div>
+                        </div><br>
+                        <!-- Email Input -->
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter Email">
+                            <small id="emailHelp" class="formtext text-muted">Your email will never be shared with anyone else.</small>
+                        </div><br>
+                        <!-- Messege -->
+                        <div class="form group">
+                            <textarea class="form-control" rows="5" placeholder="Type Your Messege Here!"></textarea>
+                        </div><br>
+                        <button type="submit" class="btn btn-secondary">Send!</button>
+                    </form>
+                </div>
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Container -->
+    <div class="container-fluid">
+        <!--Main Column -->
+        <div class="card-columns mx-auto">
+
+            <!-- Main Bio -->
+            <div class="card border-secondary bg-secondary text-white p-2" id="mainBio">
+                <h3>About Me</h3>
+                <!-- Bio Image -->
+                <div>
+                <img class="rounded" src="./assets/img/bioimage/panda.jpg" alt="Bio Image" id="mainBioImg">
+                </div>
+                <!-- Bio Text -->
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, maxime fugiat, consectetur voluptatibus voluptates iste, neque accusantium fugit obcaecati possimus temporibus veritatis magni voluptatum esse? Dolores dolorem ab commodi dolor quaerat sit laudantium ipsam explicabo enim amet? Quas praesentium excepturi blanditiis hic officiis. Cum cupiditate aperiam, laborum doloribus assumenda ducimus.</p>
+                </div>
+            </div>
+
+            <!-- Card 1 -->
+            <!-- <div class="card text-white font-weight-bold h-25 d-inline-block"> -->
+                <!-- Card Body-->
+                <!-- <div class="card-body p-0">
+                    <img src="./assets/img/backgrounds/mountains.jpg" class="card-img" alt="Card Photo">
+                    <div class="card-img-overlay card-block">
+                        <h5 class="card-title">Scratch game - Unicorn Assassin</h5>
+                        <p class="card-text">Game made for coding bootcamp prework.</p>
+                        <a type="button" data-toggle="collapse" data-target="#cardOneInfo" class="btn btn-dark font-weight-bold myBtnStyle">More Info</a>
+                        <a type="button" class="btn btn-dark font-weight-bold myBtnStyle" href="https://scratch.mit.edu/projects/321201292/" target="_blank">Link</a>
+                    </div> -->
+                    <!-- Card Expanded Information -->
+                    <!-- <div id="cardOneInfo" class="collapse cardExpanded">
+                        <h5>Unicorn Assassin</h5>
+                        <p>The coding bootcamp prework required me to create a game made on the MIT Scratch website based on a set of game rules. The example game shown had a player controled cat that had to catch balls droping from the top of the game screen. The player could move the cat side to side to collide the cat with the ball. If the ball was not caught then the game was over.</p>
+                        <br>
+                        <p>My verison of the game was called Unicorn Assasin. The player controlled a unicorn that was able to move up or down the screen and shoot rainbow beams. Instead of colliding with balls as the object of the game, mine was to hit flying gryphons with beams. The grpyhons would appear at random positions of the screen oppsite of the unicorn and fly across. The player would score a point hitting the gryphon or lose a life from either being hit or letting the gryphon reach the end of the screen. The speed at witch the gryphon flies would speed up based on the score and at an certain score a boss gryphon would appear. The boss gryphon had the following functions: set amount of hp, track player, follow player on y-axis, fire lighting bolts when at the same y-axis, flying animations. The game is infinite and only ends if the player losses all their life or exits the game. </p>
+                        <br>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Card 2 -->
+            <div class="card text-white font-weight-bold">
+                <!-- Card Body -->
+                <div class="card-body p-0">
+                    <img src="./assets/img/backgrounds/arctic.jpg" class="card-img" alt="Card Photo"> 
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Guess that State</h5>
+                        <p class="card-text">A hangman style guessing game. The theme is US States.</p>
+                        <a type="button" data-toggle="collapse" data-target="#cardTwoInfo" class="btn btn-dark font-weight-bold myBtnStyle">More Info</a>
+                        <a type="button" class="btn btn-dark font-weight-bold myBtnStyle" href="https://linmao0991.github.io/Word_Guess_Game/" target="_blank">Link</a>
+                    </div>
+                    <!-- Card Expanded Information -->
+                </div>  
+                <!-- Card Expanded Information -->
+                <div id="cardTwoInfo" class="collapse cardExpanded">
+                    <p>A hangman style word guessing game made with javascript. I used objects to store my data for the game and stored my functions inside objects. The javascript is loaded on document load, but most of the functions are called using a keypress event listener that passes the key input into the functions.</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card text-white font-weight-bold">
+                <!-- Card Body -->
+                <div class="card-body p-0">
+                    <img src="./assets/img/backgrounds/beach.jpg" class="card-img img-responsive" alt="Card Photo"> 
+                    <div class="card-img-overlay">
+                        <h5>Javascript RPG Game</h5>
+                        <p>RPG game made with Javascript.</p>
+                        <a type="button" data-toggle="collapse" data-target="#cardThreeInfo" class="btn btn-dark font-weight-bold myBtnStyle">More Info</a>
+                        <a type="button" class="btn btn-dark font-weight-bold myBtnStyle" href="https://linmao0991.github.io/rpggame/" target="_blank">Link</a>
+                    </div>
+                    <!-- Card Expanded Information -->
+                    <div id="cardThreeInfo" class="collapse cardExpanded">
+                        <p>An RPG game created with Javascript.</p>
+                    </div>
+                </div>  
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card text-white font-weight-bold">
+                <!-- Card Body -->
+                <div class="card-body p-0">
+                    <img src="./assets/img/backgrounds/cleveland.jpg" class="card-img img-responsive" alt="Card Photo"> 
+                    <div class="card-img-overlay">
+                        <h5>Trivia Game</h5>
+                        <p>Movie trivia game.</p>
+                        <a type="button" data-toggle="collapse" data-target="#cardFourInfo" class="btn btn-dark font-weight-bold myBtnStyle">More Info</a>
+                        <a type="button" class="btn btn-dark font-weight-bold myBtnStyle" href="https://linmao0991.github.io/TriviaGame/" target="_blank">Link</a>
+                    </div>
+                    <!-- Card Expanded Information -->
+                    <div id="cardFourInfo" class="collapse cardExpanded">
+                        <p>Movie trivia game using Javascript, Html and Bootstrap. A small amount of CSS was used for custom styling beyond Bootstrap. The Javascript code performs an API call to the Open Trivia Database API to get our trivia data. Then the Javascript will use the data to produce the question and answers for the Html code.</p>
+                    </div>
+                </div>  
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card text-white font-weight-bold">
+                <!-- Card Body -->
+                <div class="card-body p-0">
+                    <img src="./assets/img/backgrounds/forest.jpg" class="card-img img-responsive" alt="Card Photo"> 
+                    <div class="card-img-overlay">
+                        <h5>GifTastic</h5>
+                        <p>Create buttons of your search term then displays gifs for that term.</p>
+                        <a type="button" data-toggle="collapse" data-target="#cardFiveInfo" class="btn btn-dark font-weight-bold myBtnStyle">More Info</a>
+                        <a type="button" class="btn btn-dark font-weight-bold myBtnStyle" href="#" target="_blank">Link</a>
+                    </div>
+                    <!-- Card Expanded Information -->
+                    <div id="cardFiveInfo" class="collapse cardExpanded">
+                        <p>GifTastic will take in the search input and create a clickable button that searches Giphy for gifs relating to the search and displays them to the page. This was created using Javascript and Ajax to perform the main functions of GifTastic. Local storage is used to save user inputs and a clear local storage will clear that information. Bootstrap and CSS was used for the styling of the page.</p>
+                    </div>
+                </div>  
+            </div>
+
+            <!-- Card 6 -->
+            <!-- <div class="card text-white font-weight-bold"> -->
+                <!-- Card Body -->
+                <!-- <div class="card-body p-0">
+                    <img src="./assets/img/backgrounds/lightbulb.jpg" class="card-img img-responsive" alt="Card Photo"> 
+                    <div class="card-img-overlay">
+                        <h5>Project</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, repellendus!</p>
+                        <a type="button" data-toggle="collapse" data-target="#cardSixInfo" class="btn btn-dark font-weight-bold myBtnStyle">More Info</a>
+                        <a type="button" class="btn font-weight-bold btn-dark myBtnStyle" href="#" target="_blank">Link</a>
+                    </div> -->
+                    <!-- Card Expanded Information -->
+                    <!-- <div id="cardSixInfo" class="collapse cardExpanded">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ipsam libero similique.</p>
+                    </div>
+                </div>  
+            </div> -->
+
+            <!-- Card 7 -->
+            <!-- <div class="card text-white font-weight-bold"> -->
+                <!-- Card Body -->
+                <!-- <div class="card-body p-0">
+                    <img src="./assets/img/backgrounds/hackerbridge.jpg" class="card-img img-responsive" alt="Card Photo"> 
+                    <div class="card-img-overlay">
+                        <h5>Project</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, repellendus!</p>
+                        <a type="button" data-toggle="collapse" data-target="#cardSevenInfo" class="btn btn-dark font-weight-bold myBtnStyle">More Info</a>
+                        <a type="button" class="btn btn-dark font-weight-bold myBtnStyle" href="#" target="_blank">Link</a>
+                    </div> -->
+                    <!-- Card Expanded Information -->
+                    <!-- <div id="cardSevenInfo" class="collapse cardExpanded">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ipsam libero similique.</p>
+                    </div>
+                </div>  
+            </div> -->
+
+            <!-- Card 8 -->
+            <!-- <div class="card text-white font-weight-bold"> -->
+                <!-- Card Body -->
+                <!-- <div class="card-body p-0">
+                    <img src="./assets/img/backgrounds/borealis.jpg" class="card-img img-responsive" alt="Card Photo"> 
+                    <div class="card-img-overlay">
+                        <h5>Project</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, repellendus!</p>
+                        <a type="button" data-toggle="collapse" data-target="#cardEightInfo" class="btn btn-dark font-weight-bold myBtnStyle">More Info</a>
+                        <a type="button" class="btn btn-dark font-weight-bold myBtnStyle" href="#" target="_blank">Link</a>
+                    </div> -->
+                    <!-- Card Expanded Information -->
+                    <!-- <div id="cardEightInfo" class="collapse cardExpanded">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ipsam libero similique.</p>
+                    </div>
+                </div>  
+            </div> -->
+
+            <!-- Card 9 -->
+            <!-- <div class="card text-white font-weight-bold"> -->
+                <!-- Card Body -->
+                <!-- <div class="card-body p-0">
+                    <img src="./assets/img/backgrounds/desert.jpg" class="card-img img-responsive" alt="Card Photo"> 
+                    <div class="card-img-overlay">
+                        <h5>Project</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, repellendus!</p>
+                        <a type="button" data-toggle="collapse" data-target="#cardNineInfo" class="btn btn-dark font-weight-bold myBtnStyle">More Info</a>
+                        <a type="button" class="btn btn-dark font-weight-bold myBtnStyle" href="#" target="_blank">Link</a>
+                    </div> -->
+                    <!-- Card Expanded Information -->
+                    <!-- <div id="cardNineInfo" class="collapse cardExpanded">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ipsam libero similique.</p>
+                    </div>
+                </div>  
+            </div> -->
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            
+        </div>
+    </footer>
+</body>
+</html>

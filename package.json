@@ -1,0 +1,34 @@
+{
+  "name": "portfolio-v2",
+  "version": "1.0.0",
+  "description": "Profile Website Version 2. Html, BootStrap, JS, Jquery, SQL, Nodejs.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linmao0991/portfolio-v2.git"
+  },
+  "author": "Mao Lin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/linmao0991/portfolio-v2/issues"
+  },
+  "homepage": "https://github.com/linmao0991/portfolio-v2#readme",
+  "dependencies": {
+    "aws-sdk": "^2.590.0",
+    "bcrypt-nodejs": "0.0.3",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "mysql": "^2.17.1",
+    "mysql2": "^2.0.2",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "sequelize": "^5.21.3",
+    "sequelize-cli": "^5.5.1"
+  }
+}
