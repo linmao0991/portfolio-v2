@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "template",
+    "database": "profiledb",
     "host": "localhost",
     "dialect": "mysql",
     "operatorsAliases": false

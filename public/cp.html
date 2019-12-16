@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon:" href="assets/img/icons/m-icon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/cedf338da3.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
+    <script src="assets/javascript/cp.js"></script>
+    <title>Control Panel</title>
+</head>
+<body>
+    <!-- Jumbotron -->
+    <div id="myJumboTron" class="jumbotron text-white">
+        <h1>Control Panel</h1>
+        <div class="dropdown">
+            <button class="btn bg-secondary" data-toggle="dropdown"><i class="fas fa-lg fa-bars bg"></i></button>
+            <div class="dropdown-menu dropDownstyle">
+                <a class="dropdown-item" href="https://www.linkedin.com/in/mao-l-37254518b/" target="_blank"><i class="fab fa-linkedin">Linken</i></a>
+                <a class="dropdown-item" href="https://github.com/linmao0991" target="_blank"><i class="fab fa-github-square">GitHub</i></a>
+                <a class="dropdown-item" href="mailto:lin.maoxian0991@gmail.com"><i class="fas fa-envelope">Email</i></a>
+                <button type="button" class="btn dropdown-item dropDownstyle" data-toggle="modal" data-target="#mesModal"><i class="fas fa-comment-dots">Messege</i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Messege Modal -->
+    <div class="modal fade" id="mesModal">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h5 class="modal-tile">Messege Me</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <!-- Messege me Form -->
+                    <form>
+                        <!-- First and Last Name Input -->
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="First Name">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Last Name">
+                            </div>
+                        </div><br>
+                        <!-- Company Information -->
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Company Name">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Your Position">
+                            </div>
+                        </div><br>
+                        <!-- Email Input -->
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter Email">
+                            <small id="emailHelp" class="formtext text-muted">Your email will never be shared with anyone else.</small>
+                        </div><br>
+                        <!-- Messege -->
+                        <div class="form group">
+                            <textarea class="form-control" rows="5" placeholder="Type Your Messege Here!"></textarea>
+                        </div><br>
+                        <button type="submit" class="btn btn-secondary">Send!</button>
+                    </form>
+                </div>
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Container -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+                <button type="button" data-toggle="modal" data-target="#addProjectModal" class="btn btn-secondary">Add Project</button>
+            </div>
+            <div class="col-8">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="addProjectModal" tabindex="-1" role="dialog" aria-labelledby="addProjectModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">New Project</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="/addporject/" method="POST">
+                    <!-- Title -->
+                    <label for="project_title" class="col-form-label">Title</label>
+                    <input type="text" name="title" class="form-control" id="project_title">
+                    <!-- Short Desc -->
+                    <label for="short_desc" class="col-form-label">Short Description</label>
+                    <textarea class="form-control" name="short_desc" id="short_desc"></textarea>
+                    <!-- Long Desc -->
+                    <label for="long_desc" class="col-form-label">Long Description</label>
+                    <textarea class="form-control" name="long_desc" id="long_desc"></textarea>
+                    <!-- Image -->
+                    <label for="project_img" class="col-form-label">Project Image Url</label>
+                    <input type="text" class="form-control" name="project_img" id="project_img">
+                    <!-- Image -->
+                    <label for="project_url" class="col-form-label">Project Url</label>
+                    <input type="text" class="form-control" name="project_url" id="project_url">
+                    <br>
+                    <button type="submit" class="btn btn-secondary" value="Submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            
+        </div>
+    </footer>
+</body>
+</html>

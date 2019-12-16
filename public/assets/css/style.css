@@ -1,0 +1,126 @@
+.card-img-overlay {
+    text-shadow: 1px 1px 2px rgb(14, 14, 14);
+}
+
+.card-img {
+    opacity: 0.75;
+    min-width: 300px;
+    min-height: 100px;
+}
+
+.dropDownstyle{
+    font-size: 24px;
+}
+
+.cardMain{
+    text-shadow: 1px 1px 2px rgb(14, 14, 14);
+}
+
+.dropDownMenu{
+    height: 50px;
+    width: 50px;
+}
+
+.myBtnStyle{
+    border-style: none;
+    color: white;
+    text-shadow: 1px 1px 3px rgb(14, 14, 14);
+}
+
+.cardExpanded {
+    width: 100%;
+    height: 100%;
+    /* border-style: solid; */
+    border-width: 1px;
+    border-color: lightgray;
+    background-color: white;
+    color: rgb(90, 90, 90);
+    text-shadow: 0 0 0 white;
+    padding: 5px 5px 5px 5px;
+}
+
+@media only screen and (min-width: 576px) {
+    .card-columns {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+    .dropDownstyle{
+        font-size: 48px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .card-columns {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+    .dropDownstyle{
+        font-size: 48px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .card-columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+    .dropDownstyle{
+        font-size: 24px;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .card-columns {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+    }
+    .dropDownstyle{
+        font-size: 24px;
+    }
+}
+
+@media only screen and (min-width: 2500px) {
+    .card-columns {
+        -webkit-column-count: 5;
+        -moz-column-count: 5;
+        column-count: 5;
+    }
+    .dropDownstyle{
+        font-size: 24px;
+    }
+}
+
+@media only screen and (min-width: 3500px) {
+    .card-columns {
+        -webkit-column-count: 6;
+        -moz-column-count: 6;
+        column-count: 6;
+    }
+
+    .dropDownstyle{
+        font-size: 24px;
+    }
+}
+
+#myJumboTron{
+    background-image: url(../img/backgrounds/borealis-cabin.jpg);
+    background-size: cover;
+}
+
+#mainBio{
+    height: 100%;
+    width: 100%;
+    min-width: 300px;
+    min-height: 200px;
+}
+
+#mainBioImg {
+    height: 100%;
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+}

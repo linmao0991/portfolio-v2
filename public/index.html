@@ -28,6 +28,9 @@
                 <button type="button" class="btn dropdown-item dropDownstyle" data-toggle="modal" data-target="#mesModal"><i class="fas fa-comment-dots">Messege</i></button>
             </div>
         </div>
+        <div class="float-right">
+            <button type="button" data-toggle="modal" data-target="#loginModal" class="btn btn-secondary"></button>
+        </div>
     </div>
 
     <!-- Messege Modal -->
@@ -82,10 +85,45 @@
         </div>
     </div>
 
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Log In</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="/addporject/" method="POST">
+                    <!-- Title -->
+                    <label for="project_title" class="col-form-label">Title</label>
+                    <input type="text" name="title" class="form-control" id="project_title">
+                    <!-- Short Desc -->
+                    <label for="short_desc" class="col-form-label">Short Description</label>
+                    <textarea class="form-control" name="short_desc" id="short_desc"></textarea>
+                    <!-- Long Desc -->
+                    <label for="long_desc" class="col-form-label">Long Description</label>
+                    <textarea class="form-control" name="long_desc" id="long_desc"></textarea>
+                    <!-- Image -->
+                    <label for="project_img" class="col-form-label">Project Image Url</label>
+                    <input type="text" class="form-control" name="project_img" id="project_img">
+                    <!-- Image -->
+                    <label for="project_url" class="col-form-label">Project Url</label>
+                    <input type="text" class="form-control" name="project_url" id="project_url">
+                    <br>
+                    <button type="submit" class="btn btn-secondary" value="Submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <!-- Container -->
     <div class="container-fluid">
         <!--Main Column -->
-        <div class="card-columns mx-auto">
+        <div class="card-columns mx-auto" id="portofilo-cards">
 
             <!-- Main Bio -->
             <div class="card border-secondary bg-secondary text-white p-2" id="mainBio">
@@ -101,18 +139,18 @@
             </div>
 
             <!-- Card 1 -->
-            <!-- <div class="card text-white font-weight-bold h-25 d-inline-block"> -->
+            <div class="card text-white font-weight-bold h-25 d-inline-block">
                 <!-- Card Body-->
-                <!-- <div class="card-body p-0">
+                <div class="card-body p-0">
                     <img src="./assets/img/backgrounds/mountains.jpg" class="card-img" alt="Card Photo">
                     <div class="card-img-overlay card-block">
                         <h5 class="card-title">Scratch game - Unicorn Assassin</h5>
                         <p class="card-text">Game made for coding bootcamp prework.</p>
                         <a type="button" data-toggle="collapse" data-target="#cardOneInfo" class="btn btn-dark font-weight-bold myBtnStyle">More Info</a>
                         <a type="button" class="btn btn-dark font-weight-bold myBtnStyle" href="https://scratch.mit.edu/projects/321201292/" target="_blank">Link</a>
-                    </div> -->
+                    </div>
                     <!-- Card Expanded Information -->
-                    <!-- <div id="cardOneInfo" class="collapse cardExpanded">
+                    <div id="cardOneInfo" class="collapse cardExpanded">
                         <h5>Unicorn Assassin</h5>
                         <p>The coding bootcamp prework required me to create a game made on the MIT Scratch website based on a set of game rules. The example game shown had a player controled cat that had to catch balls droping from the top of the game screen. The player could move the cat side to side to collide the cat with the ball. If the ball was not caught then the game was over.</p>
                         <br>
@@ -120,7 +158,7 @@
                         <br>
                     </div>
                 </div>
-            </div> -->
+            </div>
 
             <!-- Card 2 -->
             <div class="card text-white font-weight-bold">
@@ -160,40 +198,40 @@
             </div>
 
             <!-- Card 4 -->
-            <div class="card text-white font-weight-bold">
+            <!-- <div class="card text-white font-weight-bold"> -->
                 <!-- Card Body -->
-                <div class="card-body p-0">
+                <!-- <div class="card-body p-0">
                     <img src="./assets/img/backgrounds/cleveland.jpg" class="card-img img-responsive" alt="Card Photo"> 
                     <div class="card-img-overlay">
                         <h5>Trivia Game</h5>
                         <p>Movie trivia game.</p>
                         <a type="button" data-toggle="collapse" data-target="#cardFourInfo" class="btn btn-dark font-weight-bold myBtnStyle">More Info</a>
                         <a type="button" class="btn btn-dark font-weight-bold myBtnStyle" href="https://linmao0991.github.io/TriviaGame/" target="_blank">Link</a>
-                    </div>
+                    </div> -->
                     <!-- Card Expanded Information -->
-                    <div id="cardFourInfo" class="collapse cardExpanded">
+                    <!-- <div id="cardFourInfo" class="collapse cardExpanded">
                         <p>Movie trivia game using Javascript, Html and Bootstrap. A small amount of CSS was used for custom styling beyond Bootstrap. The Javascript code performs an API call to the Open Trivia Database API to get our trivia data. Then the Javascript will use the data to produce the question and answers for the Html code.</p>
                     </div>
                 </div>  
-            </div>
+            </div> -->
 
             <!-- Card 5 -->
-            <div class="card text-white font-weight-bold">
+            <!-- <div class="card text-white font-weight-bold"> -->
                 <!-- Card Body -->
-                <div class="card-body p-0">
+                <!-- <div class="card-body p-0">
                     <img src="./assets/img/backgrounds/forest.jpg" class="card-img img-responsive" alt="Card Photo"> 
                     <div class="card-img-overlay">
                         <h5>GifTastic</h5>
                         <p>Create buttons of your search term then displays gifs for that term.</p>
                         <a type="button" data-toggle="collapse" data-target="#cardFiveInfo" class="btn btn-dark font-weight-bold myBtnStyle">More Info</a>
                         <a type="button" class="btn btn-dark font-weight-bold myBtnStyle" href="#" target="_blank">Link</a>
-                    </div>
+                    </div> -->
                     <!-- Card Expanded Information -->
-                    <div id="cardFiveInfo" class="collapse cardExpanded">
+                    <!-- <div id="cardFiveInfo" class="collapse cardExpanded">
                         <p>GifTastic will take in the search input and create a clickable button that searches Giphy for gifs relating to the search and displays them to the page. This was created using Javascript and Ajax to perform the main functions of GifTastic. Local storage is used to save user inputs and a clear local storage will clear that information. Bootstrap and CSS was used for the styling of the page.</p>
                     </div>
                 </div>  
-            </div>
+            </div> -->
 
             <!-- Card 6 -->
             <!-- <div class="card text-white font-weight-bold"> -->

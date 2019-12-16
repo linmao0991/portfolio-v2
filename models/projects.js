@@ -14,21 +14,30 @@ module.exports = function(sequelize, DataTypes) {
           len: [1, 60]
         }
       },
-      description: {
+      short_desc: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        validate: {
+          len: [1, 50]
+        }
+      },
+      long_desc: {
         type: DataTypes.TEXT,
         allowNull: false,
         validate: {
           len: [1, 1000]
         }
       },
+      project_img: {
+        type: DataTypes.STRING,
+        allowNull: true
+      },
+      project_url: {
+        type: DataTypes.STRING,
+        allowNull: true
+      },
       languages: {
         type: DataTypes.STRING,
-      },
-      image:{
-          type: DataTypes.STRING,
-          validate:{
-              len: [1],
-          }
       }
     });
 
