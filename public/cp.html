@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <link rel="shortcut icon" type="image/x-icon:" href="assets/img/icons/m-icon.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/cedf338da3.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/cedf338da3.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
     <script src="assets/javascript/cp.js"></script>
     <title>Control Panel</title>
@@ -22,15 +23,13 @@
         <div class="dropdown">
             <button class="btn bg-secondary" data-toggle="dropdown"><i class="fas fa-lg fa-bars bg"></i></button>
             <div class="dropdown-menu dropDownstyle">
-                <a class="dropdown-item" href="https://www.linkedin.com/in/mao-l-37254518b/" target="_blank"><i class="fab fa-linkedin">Linken</i></a>
-                <a class="dropdown-item" href="https://github.com/linmao0991" target="_blank"><i class="fab fa-github-square">GitHub</i></a>
-                <a class="dropdown-item" href="mailto:lin.maoxian0991@gmail.com"><i class="fas fa-envelope">Email</i></a>
-                <button type="button" class="btn dropdown-item dropDownstyle" data-toggle="modal" data-target="#mesModal"><i class="fas fa-comment-dots">Messege</i></button>
+                <a class="dropdown-item btn" id="home_page" href="/">Home</a>
             </div>
         </div>
     </div>
 
     <!-- Messege Modal -->
+    <!-- Change this to a messege to a different user feature? -->
     <div class="modal fade" id="mesModal">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
@@ -85,11 +84,14 @@
     <!-- Container -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-2">
+            <div class="col">
                 <button type="button" data-toggle="modal" data-target="#addProjectModal" class="btn btn-secondary">Add Project</button>
             </div>
-            <div class="col-8">
-
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card-columns mx-auto" id="portofilo-cards">
+                </div>
             </div>
         </div>
     </div>
@@ -107,13 +109,13 @@
               <form action="/addporject/" method="POST">
                     <!-- Title -->
                     <label for="project_title" class="col-form-label">Title</label>
-                    <input type="text" name="title" class="form-control" id="project_title">
+                    <input type="text" name="title" class="form-control" id="project_title" minlength="1" maxlength="50">
                     <!-- Short Desc -->
                     <label for="short_desc" class="col-form-label">Short Description</label>
-                    <textarea class="form-control" name="short_desc" id="short_desc"></textarea>
+                    <textarea class="form-control" name="short_desc" id="short_desc" minlength="10" maxlength="100"></textarea>
                     <!-- Long Desc -->
                     <label for="long_desc" class="col-form-label">Long Description</label>
-                    <textarea class="form-control" name="long_desc" id="long_desc"></textarea>
+                    <textarea class="form-control" name="long_desc" id="long_desc" minlength="10" maxlength="1000"></textarea>
                     <!-- Image -->
                     <label for="project_img" class="col-form-label">Project Image Url</label>
                     <input type="text" class="form-control" name="project_img" id="project_img">

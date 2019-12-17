@@ -31,24 +31,57 @@ module.exports = function (app) {
 
     //Route to get project by id
     app.get("/getporjects/byid/:id", function(req,res){
-        db.project.findOne({
+        db.project.findAll({
             where: {
-                id: req.params.id
+                accountId: req.params.id
             }
         }).then( function(results){
             res.json(results)
         })
     });
 
+    app.get("/api/user_data", function(req, res){
+        if(!req.user){
+            res.json({
+                user_id: "none",
+                user_name: "none",
+                logged_in: false
+            })
+        }else{
+            res.json({
+                user_id: req.user.id,
+                user_name: req.user.user_name,
+                logged_in: true
+            })
+        }
+    })
+
     //Route to add new porject
     app.post("/addporject/", function(req, res){
-        console.log(req.body)
-        // db.project.create(req.body).then( function(project){
-        //     res.json(project);
-        // })
+        req.body.user_name = req.user.user_name;
+        req.body.accountId = req.user.id;
+        console.log(req.body);
+        db.project.create(req.body).then( function(project){
+            res.redirect("/profile");
+        })
     });
 
+    //Route for login
     app.post("/api/login", passport.authenticate("local"), function (req, res) {
-        res.json(req.user);
+        res.redirect("/profile")
     });
+
+    //Route for Sign up
+    app.post("/api/signup", function (req, res) {
+        db.account.create({
+            user_name: req.body.user_name,
+            password: req.body.password,
+          })
+          .then(function () {
+            res.redirect("/profile");
+          })
+          .catch(function (err) {
+            res.status(401).json(err);
+          });
+      });
 }

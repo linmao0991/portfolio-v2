@@ -7,28 +7,55 @@ function getPortfolioData(){
     });
 }
 
-function poplatePortfolio(portofiloData){
+function poplatePortfolio(projectData){
     var cardSection = $("#portofilo-cards")
-    for (var i = 0; i < portofiloData.length; i++ ){
-        var portfolio = `<div class="card text-white font-weight-bold h-25 d-inline-block">`+
+    for (var i = 0; i < projectData.length; i++ ){
+        var project = `<div class="card text-white font-weight-bold h-25 d-inline-block">`+
                             // Card Body
                             `<div class="card-body p-0">`+
-                                `<img src="${portofiloData[i].portfolio_img}" class="card-img" alt="Card Photo">`+
+                                `<img src="${projectData[i].project_img}" class="card-img img-fluid" alt="Card Photo">`+
                                 `<div class="card-img-overlay card-block">`+
-                                    `<h5 class="card-title">${portofiloData[i].title}</h5>`+
-                                    `<p class="card-text">${portofiloData[i].short_desc}</p>`+
-                                    `<a type="button" data-toggle="collapse" data-target="#cardOneInfo" class="btn btn-dark font-weight-bold myBtnStyle">More Info</a>`+
-                                    `<a type="button" class="btn btn-dark font-weight-bold myBtnStyle" href="${portofiloData[i].portfolio_url}" target="_blank">Link</a>`+
+                                    `<h5 class="card-title">${projectData[i].title}</h5>`+
+                                    `<p class="card-text">${projectData[i].short_desc}</p>`+
+                                    `<a type="button" data-toggle="collapse" data-target="#card${projectData[i].id}Info" class="btn btn-dark font-weight-bold myBtnStyle">More Info</a>`+
+                                    `<a type="button" class="btn btn-dark font-weight-bold myBtnStyle" href="${projectData[i].project_url}" target="_blank">Link</a>`+
                                 `</div>`+
                                 // Card Expanded Information
-                                `<div id="cardOneInfo" class="collapse cardExpanded">`+
-                                    `<h5>${portofiloData[i].title}</h5>`+
-                                    `<p>${portofiloData[i].long_desc}</p>`+
+                                `<div id="card${projectData[i].id}Info" class="collapse cardExpanded">`+
+                                    `<h5>${projectData[i].title}</h5>`+
+                                    `<p>${projectData[i].long_desc}</p>`+
                                     `<br>`+
                                 `</div>`+
                             `</div>`+
                         `</div>`
-        cardSection.append(portfolio);
+        cardSection.append(project);
     }
-
 }
+
+$(document).ready(function(){
+
+    $.get("/api/user_data", function (data) {
+    }).then(function (data) {
+        console.log(data)
+        $("#loginButton").text("");
+        // If logged out, display login & signup buttons
+        if (data.logged_in == false) {
+            $("#control_panel").css("display","none");
+            getPortfolioData()
+        }
+        // If logged in, display signout & profile buttons
+        else {
+            $("#login").css("display","none");
+            $("#sign_up").css("display","none");
+            getPortfolioData()
+        }
+    });
+
+    $("#loginButton").on("click", function(){
+        $.get("/api/user_data", function (data) {
+        }).then(function (data) {
+            window.location.replace("/cp");
+        }).catch(function(){
+        })
+    })
+});
