@@ -78,10 +78,16 @@ module.exports = function (app) {
             password: req.body.password,
           })
           .then(function () {
-            res.redirect("/profile");
+            res.redirect("/");
           })
           .catch(function (err) {
             res.status(401).json(err);
           });
       });
+
+    // Route for logging user out
+    app.get("/logout", function (req, res) {
+        req.logout();
+        res.redirect("/");
+    });
 }

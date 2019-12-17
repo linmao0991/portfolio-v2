@@ -38,12 +38,13 @@ $(document).ready(function(){
     }).then(function (data) {
         console.log(data)
         $("#loginButton").text("");
-        // If logged out, display login & signup buttons
+        // If not logged in, hide these links
         if (data.logged_in == false) {
             $("#control_panel").css("display","none");
+            $("#logout").css("display","none");
             getPortfolioData()
         }
-        // If logged in, display signout & profile buttons
+        // If logged in hide these links.
         else {
             $("#login").css("display","none");
             $("#sign_up").css("display","none");
