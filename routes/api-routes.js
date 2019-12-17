@@ -16,6 +16,7 @@ aws.config.region = "us-east-2";
 var Bucket_Name = process.env.S3_BUCKET;
 var User_Key = process.env.AWS_ACCESS_KEY;
 var Secret_Key = process.env.AWS_SECRET_ACCESS_KEY;
+var isAuthenticated = require("../config/middleware/isAuthenticated");
 //-------------------------------------------------------------------
 
 // Routes
@@ -40,6 +41,15 @@ module.exports = function (app) {
         })
     });
 
+    app.post("/deleteproject/byid/:id",isAuthenticated, function(req, res){
+        db.project.destory({
+            where: {
+                id: req.params.id,
+                accountId: req.user.id
+            }
+        })
+    })
+
     app.get("/api/user_data", function(req, res){
         if(!req.user){
             res.json({
@@ -57,7 +67,7 @@ module.exports = function (app) {
     })
 
     //Route to add new porject
-    app.post("/addporject/", function(req, res){
+    app.post("/addporject/", isAuthenticated,function(req, res){
         req.body.user_name = req.user.user_name;
         req.body.accountId = req.user.id;
         console.log(req.body);

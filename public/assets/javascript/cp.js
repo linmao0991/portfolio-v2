@@ -16,8 +16,8 @@ function poplatePortfolio(projectData){
                                 `<div class="card-img-overlay card-block">`+
                                     `<h5 class="card-title">${projectData[i].title}</h5>`+
                                     `<p class="card-text">${projectData[i].short_desc}</p>`+
-                                    `<a type="button" data-toggle="collapse" data-target="#card${projectData[i].id}Info" class="btn btn-dark font-weight-bold myBtnStyle">More Info</a>`+
-                                    `<a type="button" class="btn btn-dark font-weight-bold myBtnStyle" href="${projectData[i].project_url}" target="_blank">Link</a>`+
+                                    `<a type="button" data-toggle="collapse" data-target="#card${projectData[i].id}Info" class="btn btn-dark font-weight-bold myBtnStyle mx-1">More Info</a>`+
+                                    `<a type="button" class="btn btn-dark font-weight-bold myBtnStyle mx-1" href="${projectData[i].project_url}" target="_blank">Link</a>`+
                                 `</div>`+
                                 // Card Expanded Information
                                 `<div id="card${projectData[i].id}Info" class="collapse cardExpanded">`+
