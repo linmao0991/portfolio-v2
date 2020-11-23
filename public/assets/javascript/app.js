@@ -1,6 +1,6 @@
 //Function to poplate projects
 function getPortfolioData(){
-    $.get("/getporjects/all", function(data){
+    $.get("/getporjects/all", function(){
     }).then(function (projectData){
         console.log(projectData.length);
         poplatePortfolio(projectData)

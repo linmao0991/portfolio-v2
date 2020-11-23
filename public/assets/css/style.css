@@ -118,6 +118,19 @@
     min-height: 200px;
 }
 
+#bio-text .card{
+    margin: 0px;
+    color: black;
+    border: none;
+}
+
+#bio-text .card .card-header:hover{
+    background-color: darkgrey;
+}
+#bio-text .card span{
+    float: right;
+}
+
 #mainBioImg {
     height: 100%;
     width: 100%;
