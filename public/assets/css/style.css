@@ -83,17 +83,6 @@
     }
 }
 
-@media only screen and (min-width: 1920px) {
-    #portofilo-cards {
-        -webkit-column-count: 4;
-        -moz-column-count: 4;
-        column-count: 4;
-    }
-    .dropDownstyle{
-        font-size: 24px;
-    }
-}
-
 @media only screen and (min-width: 2560px) {
     #portofilo-cards {
         -webkit-column-count: 5;
