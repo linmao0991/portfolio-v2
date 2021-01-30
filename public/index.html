@@ -156,8 +156,8 @@
         <!--Main Column -->
         <div class="card-columns mx-auto" id="portofilo-cards">
             <!-- Main Bio -->
-            <div class="card border-secondary bg-secondary text-white p-2" id="mainBio">
-                <h3>About Me</h3>
+            <div class="card bg-secondary text-white" id="mainBio">
+                <br />
                 <!-- Bio Image -->
                 <div>
                     <img class="rounded" src="./assets/img/bioimage/mao.png" alt="Bio Image" id="mainBioImg">
@@ -166,6 +166,7 @@
                 <!-- Bio Text -->
                 <div id='bio-text'>
                     <div class="accordion" id="bio-accordion">
+                        <!--About Me-->
                         <div class="card">
                             <div class="card-header" id="headingAout" data-toggle="collapse" data-target="#collapseAboutMe" aria-expanded="false" aria-controls="headingAout">
                             <h2 class="m-0">
@@ -180,177 +181,176 @@
                             </div>
                             </div>
                         </div>
+                        <!--Education-->
                         <div class="card">
-                        <div class="card-header" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            <h2 class="m-0">
-                                <h5>Education <span>+</span></h5>
-                            </h2>
-                        </div>
-                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#bio-accordion">
-                            <div class="card-body">
-                                <div>
-                                    <h6>Case Western Reserve</h6>
-                                    <p>
-                                    Full Stack Web
-                                    Development Certification
-                                    2020
-                                    </p>
-                                </div>
-                                <div>
-                                    <h6>University of Akron</h6>
-                                    <p>
-                                    Bachelor of Science in
-                                    Accounting
-                                    2016
-                                    </p>
-                                </div>
+                            <div class="card-header" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                <h2 class="m-0">
+                                    <h5>Education <span>+</span></h5>
+                                </h2>
                             </div>
-                        </div>
-                        </div>
-                        <div class="card">
-                        <div class="card-header" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            <h2 class="mb-0">
-                                <h5>Skills <span>+</span></h5>
-                            </h2>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#bio-accordion">
-                            <div class="card-body">
-                                <!-- Skills Accordion -->
-                                <div class="accordion" id="skills-accordion">
-                                    <!-- Skill Cards -->
-                                    <div class='card'>
-                                        <div class="card-header" id="skills-web-development" data-toggle="collapse" data-target="#collapseDevelopment" aria-expanded="false" aria-controls="collapseDevelopment">
-                                            <h6>Web Development Skills <span>+</span></h6>
-                                        </div>
-                                        <div id="collapseDevelopment" class="collapse" aria-labelledby="skills-web-development" data-parent="#skills-accordion">
-                                            <div class="card-body">
-                                                <b>Front End</b>
-                                                <ul>
-                                                    <li>Javascript</li>
-                                                    <li>React</li>
-                                                    <li>React Hooks</li>
-                                                    <li>React Redux</li>
-                                                    <li>React Native</li>
-                                                    <li>jQuery</li>
-                                                    <li>HTML</li>
-                                                    <li>CSS</li>
-                                                    <li>Bootstrap</li>
-                                                </ul>
-                                                <b>Back End</b>
-                                                <ul>
-                                                    <li>Node.js</li>
-                                                    <li>SQL</li>
-                                                    <li>MySQL</li>
-                                                    <li>MongoDB</li>
-                                                    <li>REST API</li>
-                                                    <li>Express.js</li>
-                                                    <li>Sequelize</li>
-                                                </ul>
-                                                <b>Concepts</b>
-                                                <ul>
-                                                    <li>Database Structure Development</li>
-                                                    <li>Full Stack Development</li>
-                                                    <li>API Development</li>
-                                                    <li>MVC</li>
-                                                    <li>UAT Testing</li>
-                                                </ul>
-                                            </div>
-                                        </div>
+
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#bio-accordion">
+                                <div class="card-body">
+                                    <div>
+                                        <h6>Case Western Reserve</h6>
+                                        <p>
+                                        Full Stack Web
+                                        Development Certification
+                                        2020
+                                        </p>
                                     </div>
-                                    <div class='card'>
-                                        <div class="card-header" id="skills-soft" data-toggle="collapse" data-target="#collapseSoftSkills" aria-expanded="false" aria-controls="collapseSoftSkills">
-                                            <h6>Soft Skills <span>+</span></h6>
-                                        </div>
-                                        <div id="collapseSoftSkills" class="collapse" aria-labelledby="skills-soft" data-parent="#skills-accordion">
-                                            <div class="card-body">
-                                                <b>Soft Skills</b>
-                                                <ul>
-                                                    <li>Initiative</li>
-                                                    <li>Interpersonal</li>
-                                                    <li>skills</li>
-                                                    <li>Adaptable</li>
-                                                    <li>Accountable</li>
-                                                    <li>Time Management</li>
-                                                    <li>Collaborative</li>
-                                                    <li>Self-motivated</li>
-                                                    <li>Resourceful</li>
-                                                    <li>Leadership</li>
-                                                    <li>Communication</li>
-                                                    <li>Problem-solving</li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                                    <div>
+                                        <h6>University of Akron</h6>
+                                        <p>
+                                        Bachelor of Science in
+                                        Accounting
+                                        2016
+                                        </p>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
-                        </div>
+                        <!--Skills-->
                         <div class="card">
-                        <div class="card-header" id="work-history" data-toggle="collapse" data-target="#collapseWork" aria-expanded="false" aria-controls="collapseWork">
-                            <h2 class="mb-0">
-                                <h5>Work History <span>+</span></h5>
-                            </h2>
-                        </div>
-                        <div id="collapseWork" class="collapse" aria-labelledby="work-history" data-parent="#bio-accordion">
-                            <div class="card-body">
-
-
-                                <div class="accordion" id="work-history-accordion">
-
-                                    <div class="card">
-                                    <div class="card-header" id="workOne" data-toggle="collapse" data-target="#collapseWorkOne" aria-expanded="false" aria-controls="workOne">
-                                        <h6 class="mb-0">
-                                            <p>CA Good & Fresh Trading <span>+</span></p>
-                                        </h6>
-                                    </div>
-                                    <div id="collapseWorkOne" class="collapse" aria-labelledby="workOne" data-parent="#work-history-accordion">
-                                        <div class="card-body">
-                                            <b>Business Operations Manager</b>
-                                            <br/>2016 - 2020
-                                            <ul>
-                                                <li>Employing strategies to ensure
-                                                company’s growth.</li>
-                                                <li>Generating financial reports.</li>
-                                                <li>Implement better business practices.</li>
-                                                <li>Maximizing operating potential to
-                                                exceed customers’ expectations and
-                                                company goals.</li>
-                                                <li>Build processes that meet our
-                                                business objectives and ensure
-                                                compliance.</li>
-                                            </ul>
+                            <div class="card-header" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <h2 class="mb-0">
+                                    <h5>Skills <span>+</span></h5>
+                                </h2>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#bio-accordion">
+                                <div class="card-body">
+                                    <!-- Skills Accordion -->
+                                    <div class="accordion" id="skills-accordion">
+                                        <!-- Skill Cards -->
+                                        <div class='card'>
+                                            <div class="card-header" id="skills-web-development" data-toggle="collapse" data-target="#collapseDevelopment" aria-expanded="false" aria-controls="collapseDevelopment">
+                                                <h6>Web Development Skills <span>+</span></h6>
+                                            </div>
+                                            <div id="collapseDevelopment" class="collapse" aria-labelledby="skills-web-development" data-parent="#skills-accordion">
+                                                <div class="card-body">
+                                                    <b>Front End</b>
+                                                    <ul>
+                                                        <li>Javascript</li>
+                                                        <li>React</li>
+                                                        <li>React Hooks</li>
+                                                        <li>React Redux</li>
+                                                        <li>React Native</li>
+                                                        <li>jQuery</li>
+                                                        <li>HTML</li>
+                                                        <li>CSS</li>
+                                                        <li>Bootstrap</li>
+                                                    </ul>
+                                                    <b>Back End</b>
+                                                    <ul>
+                                                        <li>Node.js</li>
+                                                        <li>SQL</li>
+                                                        <li>MySQL</li>
+                                                        <li>MongoDB</li>
+                                                        <li>REST API</li>
+                                                        <li>Express.js</li>
+                                                        <li>Sequelize</li>
+                                                    </ul>
+                                                    <b>Concepts</b>
+                                                    <ul>
+                                                        <li>Database Structure Development</li>
+                                                        <li>Full Stack Development</li>
+                                                        <li>API Development</li>
+                                                        <li>MVC</li>
+                                                        <li>UAT Testing</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    </div>
-
-                                    <div class="card">
-                                        <div class="card-header" id="workTwo" data-toggle="collapse" data-target="#collapseWorkTwo" aria-expanded="false" aria-controls="workTwo">
-                                        <h6 class="mb-0">
-                                            <p>KiwiSpoon <span>+</span></p>
-                                        </h6>
-                                        </div>
-                                        <div id="collapseWorkTwo" class="collapse" aria-labelledby="workTwo" data-parent="#work-history-accordion">
-                                            <div class="card-body">
-                                                <b>Business Owner</b>
-                                                <br/>2012 - 2015
-                                                <ul>
-                                                    <li>Business Planner and Strategist</li>
-                                                    <li>Employees Management and Human Resources</li>
-                                                    <li>Business Operations & Management</li>
-                                                    <li>Finance and Accounting</li>
-                                                    <li>Customer Service Duties</li>
-                                                    <li>Marketing and Sales</li>
-                                                    <li>Daily operations</li>
-                                                </ul>
+                                        <div class='card'>
+                                            <div class="card-header" id="skills-soft" data-toggle="collapse" data-target="#collapseSoftSkills" aria-expanded="false" aria-controls="collapseSoftSkills">
+                                                <h6>Soft Skills <span>+</span></h6>
+                                            </div>
+                                            <div id="collapseSoftSkills" class="collapse" aria-labelledby="skills-soft" data-parent="#skills-accordion">
+                                                <div class="card-body">
+                                                    <b>Soft Skills</b>
+                                                    <ul>
+                                                        <li>Initiative</li>
+                                                        <li>Interpersonal</li>
+                                                        <li>skills</li>
+                                                        <li>Adaptable</li>
+                                                        <li>Accountable</li>
+                                                        <li>Time Management</li>
+                                                        <li>Collaborative</li>
+                                                        <li>Self-motivated</li>
+                                                        <li>Resourceful</li>
+                                                        <li>Leadership</li>
+                                                        <li>Communication</li>
+                                                        <li>Problem-solving</li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    </div>
-
                                 </div>
+                            </div>
+                        </div>
+                        <!--Work History-->
+                        <div class="card">
+                            <div class="card-header" id="work-history" data-toggle="collapse" data-target="#collapseWork" aria-expanded="false" aria-controls="collapseWork">
+                                <h2 class="mb-0">
+                                    <h5>Work History <span>+</span></h5>
+                                </h2>
+                            </div>
+                            <div id="collapseWork" class="collapse" aria-labelledby="work-history" data-parent="#bio-accordion">
+                                <div class="card-body">
+                                    <div class="accordion" id="work-history-accordion">
 
+                                        <div class="card">
+                                            <div class="card-header" id="workOne" data-toggle="collapse" data-target="#collapseWorkOne" aria-expanded="false" aria-controls="workOne">
+                                                <h6 class="mb-0">
+                                                    <p>CA Good & Fresh Trading <span>+</span></p>
+                                                </h6>
+                                            </div>
+                                            <div id="collapseWorkOne" class="collapse" aria-labelledby="workOne" data-parent="#work-history-accordion">
+                                                <div class="card-body">
+                                                    <b>Business Operations Manager</b>
+                                                    <br/>2016 - 2020
+                                                    <ul>
+                                                        <li>Employing strategies to ensure
+                                                        company’s growth.</li>
+                                                        <li>Generating financial reports.</li>
+                                                        <li>Implement better business practices.</li>
+                                                        <li>Maximizing operating potential to
+                                                        exceed customers’ expectations and
+                                                        company goals.</li>
+                                                        <li>Build processes that meet our
+                                                        business objectives and ensure
+                                                        compliance.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
 
-
+<!--                                        <div class="card">-->
+<!--                                            <div class="card-header" id="workTwo" data-toggle="collapse" data-target="#collapseWorkTwo" aria-expanded="false" aria-controls="workTwo">-->
+<!--                                            <h6 class="mb-0">-->
+<!--                                                <p>KiwiSpoon <span>+</span></p>-->
+<!--                                            </h6>-->
+<!--                                            </div>-->
+<!--                                            <div id="collapseWorkTwo" class="collapse" aria-labelledby="workTwo" data-parent="#work-history-accordion">-->
+<!--                                                <div class="card-body">-->
+<!--                                                    <b>Business Owner</b>-->
+<!--                                                    <br/>2012 - 2015-->
+<!--                                                    <ul>-->
+<!--                                                        <li>Business Planner and Strategist</li>-->
+<!--                                                        <li>Employees Management and Human Resources</li>-->
+<!--                                                        <li>Business Operations & Management</li>-->
+<!--                                                        <li>Finance and Accounting</li>-->
+<!--                                                        <li>Customer Service Duties</li>-->
+<!--                                                        <li>Marketing and Sales</li>-->
+<!--                                                        <li>Daily operations</li>-->
+<!--                                                    </ul>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

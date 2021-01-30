@@ -120,6 +120,7 @@
 #myJumboTron{
     background-image: url(../img/backgrounds/borealis-cabin.jpg);
     background-size: cover;
+    border-radius: 0;
 }
 
 #mainBio{
@@ -127,6 +128,9 @@
     width: 100%;
     min-width: 300px;
     min-height: 200px;
+    background-image: url(../img/backgrounds/borealis-cabin.jpg);
+    background-size: cover;
+    padding: 10px;
 }
 
 #main-content .col{
@@ -137,7 +141,9 @@
 #bio-text .card{
     color: black;
     border: none;
-    margin: 0px;
+    margin: -3px;
+    margin-left: auto;
+    maring-right: auto;
 }
 
 #bio-text .card .card-header:hover{
@@ -155,4 +161,8 @@
     width: 66%;
     max-height: 66%;
     max-width: 66%;
+}
+
+#bio-accordion{
+    opacity: .9;
 }
